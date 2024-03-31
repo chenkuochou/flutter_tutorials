@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:flutter_tutorials/home/tutorial_model.dart';
+import 'package:flutter_tutorials/tutorial/tutorial_model.dart';
 import 'package:flutter_tutorials/home/home_provider.dart';
+import 'package:flutter_tutorials/tutorial/tutorial_provider.dart';
 
 class HomePage extends ConsumerWidget {
   const HomePage({super.key});
