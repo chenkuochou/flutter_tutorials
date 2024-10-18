@@ -5,7 +5,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class LikeButton extends StatefulWidget {
-  const LikeButton({Key? key}) : super(key: key);
+  const LikeButton({super.key});
 
   @override
   State<LikeButton> createState() => _LikeButtonState();
