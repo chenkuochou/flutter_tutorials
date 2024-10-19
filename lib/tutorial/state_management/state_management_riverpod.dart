@@ -16,7 +16,7 @@ class StateManagementRiverpod extends ConsumerWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Is the light on? $power"),
-            const Gap(20),
+            const Gap(50),
             FilledButton(
               onPressed: () {
                 ref.read(powerProvider.notifier).toggle();

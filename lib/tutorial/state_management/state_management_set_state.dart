@@ -21,7 +21,7 @@ class _StateManagementSetStateState extends State<StateManagementSetState> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text("Is the light on? $power"),
-            const Gap(20),
+            const Gap(50),
             FilledButton(
               onPressed: () {
                 setState(() {
