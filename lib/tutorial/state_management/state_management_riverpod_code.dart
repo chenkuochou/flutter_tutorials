@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:gap/gap.dart';
+import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-class StateManagementRiverpod extends ConsumerWidget {
-  const StateManagementRiverpod({super.key});
+part 'state_management_riverpod_code.g.dart';
+
+class StateManagementRiverpodCode extends ConsumerWidget {
+  const StateManagementRiverpodCode({super.key});
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -18,9 +21,7 @@ class StateManagementRiverpod extends ConsumerWidget {
             Text("Is the light on? $power"),
             const Gap(20),
             FilledButton(
-              onPressed: () {
-                ref.read(powerProvider.notifier).toggle();
-              },
+              onPressed: () => ref.read(powerProvider.notifier).toggle(),
               child: Text(power ? 'Turn off' : 'Turn on'),
             ),
           ],
@@ -30,10 +31,9 @@ class StateManagementRiverpod extends ConsumerWidget {
   }
 }
 
-final powerProvider = NotifierProvider<PowerNotifier, bool>(PowerNotifier.new);
-
-class PowerNotifier extends Notifier<bool> {
+@riverpod
+class Power extends _$Power {
   @override
-  build() => false;
+  bool build() => false;
   void toggle() => state = !state;
 }

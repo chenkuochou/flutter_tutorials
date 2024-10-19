@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 
 class StateManagementSetState extends StatefulWidget {
   const StateManagementSetState({super.key});
 
   @override
-  State<StateManagementSetState> createState() => _StateManagementSetStateState();
+  State<StateManagementSetState> createState() =>
+      _StateManagementSetStateState();
 }
 
 class _StateManagementSetStateState extends State<StateManagementSetState> {
@@ -12,19 +14,25 @@ class _StateManagementSetStateState extends State<StateManagementSetState> {
 
   @override
   Widget build(BuildContext context) {
-    return 
-         Container(
-          color: power ? Colors.white : Colors.black,
-          child: Center(
-            child: FilledButton(
+    return Container(
+      color: power ? Colors.white : Colors.grey,
+      child: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text("Is the light on? $power"),
+            const Gap(20),
+            FilledButton(
               onPressed: () {
                 setState(() {
                   power = !power;
                 });
               },
-              child: power ? const Text('Turn off') : const Text('Turn on'),
+              child: Text(power ? 'Turn off' : 'Turn on'),
             ),
-          ),
+          ],
+        ),
+      ),
     );
   }
 }
