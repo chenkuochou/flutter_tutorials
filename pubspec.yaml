@@ -25,8 +25,8 @@ dependencies:
   # go_router: ^14.2.1
   gap: ^3.0.1
 
-  # firebase_core: ^2.20.0
-  # firebase_auth: ^4.12.0
+  firebase_core: ^2.20.0
+  firebase_auth: ^4.12.0
   # cloud_firestore: ^4.14.0
   # firebase_storage: ^11.4.1
 
