@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_tutorials/tutorial/auth_firebase/auth_repository.dart';
 import 'package:flutter_tutorials/tutorial/state_management/state_management_riverpod.dart';
 import 'package:flutter_tutorials/tutorial/state_management/state_management_riverpod_code.dart';
 import 'package:flutter_tutorials/tutorial/state_management/state_management_set_state.dart';
@@ -20,4 +21,9 @@ List<TutorialModel> tutorialList = [
     widget: const StateManagementRiverpodCode(),
     icon: Icons.code,
   ),
+  TutorialModel(
+    title: 'Auth Firebase Repository Pattern',
+    widget: const AuthRepositoryPage(),
+    icon: Icons.login,
+  )
 ];
