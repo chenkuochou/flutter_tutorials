@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_tutorials/core/tutorial_model.dart';
-import 'package:flutter_tutorials/tutorial/tutorial_list.dart';
+import 'package:flutter_tutorials/core/tutorial_list.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class HomePage extends HookConsumerWidget {
@@ -12,7 +12,7 @@ class HomePage extends HookConsumerWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Flutter Tutorials'),
+        title: const Text('Flutter by Example'),
       ),
       body: ListView.builder(
         itemCount: tutorials.length,
